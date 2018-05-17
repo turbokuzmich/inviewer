@@ -2,6 +2,7 @@
 @import 'bulma/sass/base/_all.sass';
 
 $red: #cb1a1a;
+$separator-color: #d4d6d7;
 $text-color: #273138;
 
 body {
@@ -20,10 +21,10 @@ a {
 .button {
     height: 30px;
     line-height: 30px;
-    font-size: 14px;
     text-transform: uppercase;
     padding: 0 20px;
     border-radius: 15px;
+    font-size: 14px;
     color: white;
 
     &_red {
@@ -40,6 +41,7 @@ a {
     &__row {
         display: flex;
         margin-bottom: 16px;
+        position: relative;
 
         &:last-child {
             margin-bottom: 0;
@@ -53,6 +55,29 @@ a {
         flex-grow: 1;
         font-weight: bold;
     }
+    &__point {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+    }
+
+    &_justified {
+        .info-pair__type {
+            width: 60%;
+        }
+        .info-pair__definition {
+            text-align: right;
+        }
+    }
+    &_left-padded {
+        .info-pair__type {
+            padding-left: 30px;
+        } 
+    }
 }
 
 .cols {
@@ -65,15 +90,33 @@ a {
             max-width: 32%;
         }
     }
+    &_2 {
+        .col {
+            width: 50%;
+            max-width: 50%;
+        }
+    }
 
     .col {
         flex-grow: 1;
     }
 }
 
+.important-note {
+    border-left: solid 8px $red;
+    padding-left: 20px;
+    margin-bottom: 32px;
+}
+
 .section {
+    border-bottom: solid 1px $separator-color;
+
     &.gray {
         background-color: #f8f8f8;
+        border-bottom: none;
+    }
+    &.without-separator {
+        border-bottom: none;
     }
 }
 
@@ -107,7 +150,6 @@ a {
 
 .main-header {
     margin-bottom: 0;
-    border-bottom: solid 1px #d4d6d7;
 
     .container {
         height: 88px;
@@ -197,7 +239,7 @@ a {
         width: 380px;
     }
     .main {
-        border-bottom: solid 1px #d4d6d7;
+        border-bottom: solid 1px $separator-color;
         padding-bottom: 32px;
         margin-bottom: 32px;
     }
