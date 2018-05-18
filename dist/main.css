@@ -127,7 +127,7 @@ body {
   line-height: 1.5; }
 
 a {
-  color: #3273dc;
+  color: #3ba5d6;
   cursor: pointer;
   text-decoration: none; }
   a strong {
@@ -953,6 +953,31 @@ a:hover {
   .button:hover {
     color: white;
     opacity: 0.8; }
+
+ul.list {
+  list-style: disc inside; }
+
+.arrowed-toggler {
+  padding-right: 20px; }
+  .arrowed-toggler:before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-color: #3ba5d6;
+    border-style: solid;
+    border-width: 0 0 2px 2px;
+    right: 0;
+    top: 50%;
+    transform-origin: 50%;
+    transform: translateY(-80%) rotateZ(-45deg); }
+  .arrowed-toggler:hover {
+    border-color: #000; }
+    .arrowed-toggler:hover:before {
+      border-color: #000; }
+  .arrowed-toggler_open:before {
+    transform: translateY(-23%) rotateZ(135deg); }
 
 .info-pair__row {
   display: flex;

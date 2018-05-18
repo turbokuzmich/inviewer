@@ -1,9 +1,11 @@
 @import 'bulma/sass/utilities/_all.sass';
-@import 'bulma/sass/base/_all.sass';
 
 $red: #cb1a1a;
 $separator-color: #d4d6d7;
 $text-color: #273138;
+$link: #3ba5d6;
+
+@import 'bulma/sass/base/_all.sass';
 
 body {
     font-family: sans-serif;
@@ -34,6 +36,51 @@ a {
     &:hover {
         color: white;
         opacity: 0.8;
+    }
+}
+
+ul {
+    &.list {
+        list-style: disc inside;
+    }
+
+    li {
+        &.list__item {
+
+        }
+    }
+}
+
+.arrowed-toggler {
+    padding-right: 20px;
+
+    &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-color: $link;
+        border-style: solid;
+        border-width: 0 0 2px 2px;
+        right: 0;
+        top: 50%;
+        transform-origin: 50%;
+        transform: translateY(-80%) rotateZ(-45deg);
+
+    }
+    &:hover {
+        border-color: #000;
+
+        &:before {
+            border-color: #000;
+        }
+    }
+
+    &_open {
+        &:before { 
+            transform: translateY(-23%) rotateZ(135deg);
+        }
     }
 }
 
