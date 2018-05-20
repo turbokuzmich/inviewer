@@ -1,0 +1,39 @@
+.cost {
+    @include mobile {
+
+    }
+    @media screen and (max-width: $desktop) {
+        .pie-chart {
+            flex-direction: column;
+
+            &__graph {
+                padding-right: 0;
+                margin-bottom: $size-6;
+            }
+            &__info {
+                display: flex;
+                padding-left: 0;
+                width: auto;
+
+                &-summary {
+                    flex-grow: 1;
+                }
+                .important-note {
+                    width: 200px;
+                }
+            }
+        }
+    }
+    @include desktop {
+        .pie-chart {
+            flex-direction: row;
+        }
+        &__chart {
+            width: 66.6%;
+            flex: none;
+        }
+    }
+    @include widescreen {
+
+    }
+}

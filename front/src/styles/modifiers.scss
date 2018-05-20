@@ -1,0 +1,24 @@
+.is-vertical-paddingless {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.is-shrunk {
+    flex-shrink: 1;
+}
+
+.is-not-shrunk {
+    flex-shrink: 0;
+}
+
+.is-grown {
+    flex-grow: 1;
+}
+
+.is-not-grown {
+    flex-grow: 0;
+}
+
+.with-bottom-separator {
+    @include with-bottom-separator;
+}

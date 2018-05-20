@@ -1,0 +1,35 @@
+.main-header {
+    line-height: 0;
+
+    @include with-bottom-separator;
+
+    &.section {
+        padding-top: $size-6;
+        padding-bottom: $size-6;
+    }
+
+    .menu-button {
+        margin-left: 50px;
+
+        svg {
+            width: 26px;
+            fill: $link;
+        }
+
+        &:hover {
+            svg {
+                fill: $link-hover;
+            }
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    @include mobile {
+        .level-left + .level-right {
+            margin-top: $size-8;
+        }
+    }
+}

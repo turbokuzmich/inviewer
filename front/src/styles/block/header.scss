@@ -1,0 +1,11 @@
+.with-offset-icon {
+    position: relative;
+
+    svg {
+        position: absolute;
+        width: 30px;
+        left: -38px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

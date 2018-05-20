@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>InViewer</title>
-    <link href="main.css" rel="stylesheet"></head>
+    </head>
     <body>
         <div class="section main-header">
             <div class="container">
@@ -13,14 +13,14 @@
                     <div class="level-left">
                         <div class="level-item">
                             <a class="logo" href="/">
-                                <img src="images/logo.png" width="136" height="47" alt="">
+                                <img src="<%= require('images/logo.png') %>" width="136" height="47" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="level-right">
                         <div class="level-item">
                             <a class="button is-primary is-uppercase" href="/">добавить свой объект</a>
-                            <a class="menu-button" href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 21"><path fill-rule="evenodd" d="M24.5 12h-23a1.5 1.5 0 0 1 0-3h23a1.5 1.5 0 0 1 0 3zm0-9h-23a1.5 1.5 0 1 1 0-3h23a1.5 1.5 0 1 1 0 3zm-23 15h23a1.5 1.5 0 0 1 0 3h-23a1.5 1.5 0 0 1 0-3z"/></svg></a>
+                            <a class="menu-button" href="/"><img inline src="front/src/images/menu-icon.svg" width="26" height="21" alt="Меню"></a>
                         </div>
                     </div>
                 </div>
@@ -45,8 +45,8 @@
                         </div>
                     </div>
                     <div class="level-right top-seller__actions">
-                        <a class="top-seller__action" href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.51 84.67"><path d="M80.12 57.57l-16.1-8.3a8.37 8.37 0 0 0-10.4 2.3l-4.3 5.5a52.65 52.65 0 0 1-12.2-9.4 54.44 54.44 0 0 1-9.5-12.5l5.5-4.3a8.47 8.47 0 0 0 2.3-10.4l-8.3-16a8.38 8.38 0 0 0-12-3.1l-10.2 6.8a11.07 11.07 0 0 0-4.9 9.9 57 57 0 0 0 1.3 9.7c3.1 12 10.5 24.3 20.9 34.7s22.7 17.8 34.7 20.9a58.56 58.56 0 0 0 9.7 1.3h.7a11 11 0 0 0 9.2-5l6.7-10.3a8.36 8.36 0 0 0-3.1-11.8zm-1.9 8.6l-6.7 10.3a5.09 5.09 0 0 1-4.5 2.3 46.66 46.66 0 0 1-8.6-1.1c-10.9-2.8-22.3-9.7-31.9-19.4s-16.5-21-19.4-31.9a46.66 46.66 0 0 1-1.1-8.6 5 5 0 0 1 2.2-4.5l10.2-6.8a2.42 2.42 0 0 1 1.3-.4 1.27 1.27 0 0 1 .6.1 2.29 2.29 0 0 1 1.5 1.2l8.3 16a2.44 2.44 0 0 1-.6 2.9l-9.5 7.4 1.2 2.2a60.21 60.21 0 0 0 11.8 16.1 62.34 62.34 0 0 0 15.9 11.6l2.2 1.2 7.5-9.6a2.31 2.31 0 0 1 2.9-.6l16.1 8.3a2.29 2.29 0 0 1 1.2 1.5 3.85 3.85 0 0 1-.6 1.8z"/></svg>Контакты продавца</a>
-                        <a class="top-seller__action" href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M27 22a4.94 4.94 0 0 0-4.4 2.7L9.3 18.5A5.2 5.2 0 0 0 10 16a5.2 5.2 0 0 0-.7-2.5l13.3-6.2A5 5 0 0 0 32 5a5 5 0 0 0-10 0v.3L7.9 11.9A5.53 5.53 0 0 0 5 11a5 5 0 0 0 0 10 5.53 5.53 0 0 0 2.9-.9L22 26.7v.3a5 5 0 1 0 5-5zm0-20a3 3 0 0 1 3 3 3 3 0 0 1-6 0 3 3 0 0 1 3-3zM2 16a3 3 0 0 1 3-3 3 3 0 0 1 0 6 3 3 0 0 1-3-3zm25 14a3 3 0 1 1 3-3 2.95 2.95 0 0 1-3 3z"/></svg>Поделиться</a>
+                        <a class="top-seller__action" href="/"><img inline src="front/src/images/phone-icon.svg" alt="Контакты продавца">Контакты продавца</a>
+                        <a class="top-seller__action" href="/"><img inline src="front/src/images/share-icon.svg" alt="Поделиться">Поделиться</a>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                             <div class="general-information__map-caption">
                                 <span class="general-information__map-bullet">&nbsp;</span>
                                 м. Славянский бульвар
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.05 87.01"><path d="M30.62 66.91l-6.75-11.25L19.11 69 9.7 83.3c-1.53 2.6-3.32 4.25-5.86 3.54s-4.29-3.52-3.12-6l9.61-15.93 4.19-15.32a9 9 0 0 0-.62-3.66 10.07 10.07 0 0 1-.27-5l2.49-14.3L9.93 32 7.39 42.84c-.4 2.27-1.63 4-3.73 4A3.63 3.63 0 0 1 .01 43l3.27-13.48A4.9 4.9 0 0 1 5.18 26l13.55-9.71a12.14 12.14 0 0 1 13 2.44l6.58 13.15 7.43 5.67c1.59 1.72 1.8 4.12.24 5.58-1.35 1.26-3.92.41-5.2-.91l-6.45-4.92c-1.28-.76-4.2-6.85-4.2-6.85l-2 12.88a3.29 3.29 0 0 0 .48 2.6l10.16 16.26 2.83 18.65c.67 3.06-.69 5.26-3 5.86a4.37 4.37 0 0 1-5.41-3.29z"/><ellipse cx="56.08" cy="14.36" rx="7.1" ry="7.37" transform="rotate(-10.38 4.316 156.573)"/></svg>
+                                <img inline src="front/src/images/man-icon.svg" />
                                 ~ 2 мин.
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                 <div class="columns">
                     <div class="column">
                         <h3 class="title is-size-5 with-offset-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" id="a25d6af9-cfd2-4ea5-933a-27e129b1521a" data-name="Слой 1" viewBox="0 0 80 80.13"><path d="M11.12 90.19h54.26a1 1 0 0 0 1-1V72.3l15.34 2.78h.18a1 1 0 0 0 1-.82l7.23-39.93a1 1 0 0 0 0-.39 1.89 1.89 0 0 0-.09-.21.84.84 0 0 0-.06-.14l-10.8-15.83a1 1 0 0 0-.64-.42l-40.18-7.27a1 1 0 0 0-1.16.79l-4.46 23.08H11.12a1 1 0 0 0-1 1v54.25a1 1 0 0 0 1 1zM53 37.39l10 10.23H53zm25.91-16.48l8 11.86L77.08 31zM39 12.21l38.2 6.92-2.26 12.48a1 1 0 0 0 .8 1.16L88 35l-6.87 38-14.75-2.73V48.62a1 1 0 0 0-.08-.38 1.48 1.48 0 0 0-.13-.21s0-.08-.08-.11L52.67 34.24a1 1 0 0 0-.71-.3H34.77zM12.12 35.94H51v12.68a1 1 0 0 0 1 1h12.38v38.57H12.12z" transform="translate(-10.13 -10.06)"/><path d="M51.36 64.45a1 1 0 0 0-.86-.5h-9.69a1 1 0 0 0-.87.5l-4.85 8.39a1 1 0 0 0 0 1l4.85 8.39a1 1 0 0 0 .87.5h9.69a1 1 0 0 0 .86-.5l4.85-8.39a1 1 0 0 0 0-1zm-1.44 16.28h-8.54l-4.27-7.39L41.38 66h8.54l4.27 7.39z" transform="translate(-10.13 -10.06)"/><path d="M45.65 68.16a5.08 5.08 0 1 0 5.08 5.08 5.09 5.09 0 0 0-5.08-5.08zm0 8.16a3.08 3.08 0 1 1 3.08-3.08 3.08 3.08 0 0 1-3.08 3.08zM37.93 59.82l3.15-9.17a1 1 0 0 0-.19-1l-6.35-7.31a1 1 0 0 0-.95-.33l-9.51 1.85a1 1 0 0 0-.76.66l-3.15 9.18a1 1 0 0 0 .19 1l6.36 7.3a1 1 0 0 0 .75.34.62.62 0 0 0 .19 0l9.52-1.85a1 1 0 0 0 .75-.67zm-10.08.43l-5.6-6.44L25 45.74l8.38-1.63L39 50.55l-2.77 8.07z" transform="translate(-10.13 -10.06)"/><path d="M29.66 47.2a5 5 0 0 0-3.94 5.8 4.92 4.92 0 0 0 2.1 3.18 5 5 0 0 0 2.78.85 5.2 5.2 0 0 0 1-.09 5 5 0 0 0-1.9-9.77zm3.41 6.55A2.91 2.91 0 0 1 31.18 55a3 3 0 0 1-2.24-.45 2.93 2.93 0 0 1-1.25-1.9 2.89 2.89 0 0 1 .45-2.23A2.94 2.94 0 0 1 30 49.16a2.76 2.76 0 0 1 .57-.06 3 3 0 0 1 2.46 4.65z" transform="translate(-10.13 -10.06)"/></svg>
+                            <img inline src="front/src/images/construction-icon.svg" alt="" />
                             Конструкция
                         </h3>
                         <dl class="with-type-width-40 with-bold-definition">
@@ -114,7 +114,7 @@
                     </div>
                     <div class="column">
                         <h3 class="title is-size-5 with-offset-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" id="a2b7187c-e369-45f4-96de-49bdc5f81f69" data-name="Слой 1" viewBox="0 0 68.5 68"><path d="M31 59.3V23.5a7.5 7.5 0 0 0-15 0v35.8a13.5 13.5 0 1 0 15 0zM23.5 81a10.49 10.49 0 0 1-5.2-19.6 1.46 1.46 0 0 0 .7-1.3V23.5a4.5 4.5 0 0 1 9 0v36.6a1.71 1.71 0 0 0 .7 1.3 10.76 10.76 0 0 1 5.3 9.1A10.5 10.5 0 0 1 23.5 81z" transform="translate(-10 -16)"/><path d="M25 63.2V31.5a1.5 1.5 0 0 0-3 0v31.7a7.48 7.48 0 1 0 9 7.3 7.42 7.42 0 0 0-6-7.3z" transform="translate(-10 -16)"/><path fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3" d="M31.67 14H67M31.67 27.02h24M31.67 40.05h12"/><circle cx="13.51" cy="54.4" r="4.08" fill="#fff"/></svg>
+                            <img inline src="front/src/images/heating-icon.svg" alt="" />
                             Тип отопления
                         </h3>
                         <dl class="with-type-width-40 with-bold-definition">
@@ -132,7 +132,7 @@
                     </div>
                     <div class="column">
                         <h3 class="title is-size-5 with-offset-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" id="a25d6af9-cfd2-4ea5-933a-27e129b1521a" data-name="Слой 1" viewBox="0 0 80 80.13"><path d="M11.12 90.19h54.26a1 1 0 0 0 1-1V72.3l15.34 2.78h.18a1 1 0 0 0 1-.82l7.23-39.93a1 1 0 0 0 0-.39 1.89 1.89 0 0 0-.09-.21.84.84 0 0 0-.06-.14l-10.8-15.83a1 1 0 0 0-.64-.42l-40.18-7.27a1 1 0 0 0-1.16.79l-4.46 23.08H11.12a1 1 0 0 0-1 1v54.25a1 1 0 0 0 1 1zM53 37.39l10 10.23H53zm25.91-16.48l8 11.86L77.08 31zM39 12.21l38.2 6.92-2.26 12.48a1 1 0 0 0 .8 1.16L88 35l-6.87 38-14.75-2.73V48.62a1 1 0 0 0-.08-.38 1.48 1.48 0 0 0-.13-.21s0-.08-.08-.11L52.67 34.24a1 1 0 0 0-.71-.3H34.77zM12.12 35.94H51v12.68a1 1 0 0 0 1 1h12.38v38.57H12.12z" transform="translate(-10.13 -10.06)"/><path d="M51.36 64.45a1 1 0 0 0-.86-.5h-9.69a1 1 0 0 0-.87.5l-4.85 8.39a1 1 0 0 0 0 1l4.85 8.39a1 1 0 0 0 .87.5h9.69a1 1 0 0 0 .86-.5l4.85-8.39a1 1 0 0 0 0-1zm-1.44 16.28h-8.54l-4.27-7.39L41.38 66h8.54l4.27 7.39z" transform="translate(-10.13 -10.06)"/><path d="M45.65 68.16a5.08 5.08 0 1 0 5.08 5.08 5.09 5.09 0 0 0-5.08-5.08zm0 8.16a3.08 3.08 0 1 1 3.08-3.08 3.08 3.08 0 0 1-3.08 3.08zM37.93 59.82l3.15-9.17a1 1 0 0 0-.19-1l-6.35-7.31a1 1 0 0 0-.95-.33l-9.51 1.85a1 1 0 0 0-.76.66l-3.15 9.18a1 1 0 0 0 .19 1l6.36 7.3a1 1 0 0 0 .75.34.62.62 0 0 0 .19 0l9.52-1.85a1 1 0 0 0 .75-.67zm-10.08.43l-5.6-6.44L25 45.74l8.38-1.63L39 50.55l-2.77 8.07z" transform="translate(-10.13 -10.06)"/><path d="M29.66 47.2a5 5 0 0 0-3.94 5.8 4.92 4.92 0 0 0 2.1 3.18 5 5 0 0 0 2.78.85 5.2 5.2 0 0 0 1-.09 5 5 0 0 0-1.9-9.77zm3.41 6.55A2.91 2.91 0 0 1 31.18 55a3 3 0 0 1-2.24-.45 2.93 2.93 0 0 1-1.25-1.9 2.89 2.89 0 0 1 .45-2.23A2.94 2.94 0 0 1 30 49.16a2.76 2.76 0 0 1 .57-.06 3 3 0 0 1 2.46 4.65z" transform="translate(-10.13 -10.06)"/></svg>
+                            <img inline src="front/src/images/construction-icon.svg" alt="" />
                             Этажность
                         </h3>
                         <dl class="with-type-width-40 with-bold-definition">
@@ -154,7 +154,7 @@
         <div class="section with-bottom-separator photos">
             <div class="container">
                 <h3 class="title is-size-5 with-offset-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="677f2acb-f769-4c8c-9d4f-15f0b1ddc49a" data-name="Слой 1" viewBox="0 0 88 70"><path d="M28.81 0a2 2 0 0 0-1.53 1l-6.4 11H8a8 8 0 0 0-8 8v42a8 8 0 0 0 8 8h72a8 8 0 0 0 8-8V20a8 8 0 0 0-8-8H67.12l-6.4-11A2 2 0 0 0 59 0H28.81zm1.31 4h27.76l6.4 11A2 2 0 0 0 66 16h14a4 4 0 0 1 4 4v42a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V20a4 4 0 0 1 4-4h14a2 2 0 0 0 1.72-1zM44 19a20 20 0 1 0 20 20 20 20 0 0 0-20-20zm0 4a16 16 0 1 1-16 16 16 16 0 0 1 16-16z"/></svg>
+                    <img inline src="front/src/images/camera-icon.svg" alt="" />
                     Фотографии
                 </h3>
                 <div class="vertical-slider">
@@ -178,7 +178,7 @@
         <div class="section layout with-bottom-separator">
             <div class="container">
                 <h3 class="title is-size-5 with-offset-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="04ecd17f-0e12-4a42-a83f-4ac5a78e3ab4" data-name="Слой 1" viewBox="0 0 33.94 33.94"><path d="M16.97 1.41l1.42 1.42.7-.71L16.97 0l-2.12 2.12.71.71 1.41-1.42zM2.83 18.39l-1.42-1.42 1.42-1.41-.71-.71L0 16.97l2.12 2.12.71-.7z"/><path d="M12.08 4.1h2v1h-2z" transform="rotate(-45 13.085 4.6)"/><path d="M9.25 6.92h2v1h-2z" transform="rotate(-45 10.246 7.426)"/><path d="M6.42 9.75h2v1h-2z" transform="rotate(-45 7.419 10.257)"/><path d="M3.6 12.58h2v1h-2z" transform="rotate(-45 4.596 13.076)"/><path d="M16.97 32.53l-1.41-1.42-.71.71 2.12 2.12 2.12-2.12-.7-.71-1.42 1.42zM31.11 15.56l1.42 1.41-1.42 1.42.71.7 2.12-2.12-2.12-2.12-.71.71z"/><path d="M19.86 28.84h2v1h-2z" transform="rotate(-45 20.854 29.342)"/><path d="M22.69 26.02h2v1h-2z" transform="rotate(-45 23.693 26.516)"/><path d="M25.52 23.19h2v1h-2z" transform="rotate(-45 26.52 23.685)"/><path d="M28.34 20.36h2v1h-2z" transform="rotate(-45 29.343 20.866)"/><path d="M28.84 12.08h1v2h-1z" transform="rotate(-45 29.34 13.087)"/><path d="M26.02 9.25h1v2h-1z" transform="rotate(-45 26.515 10.247)"/><path d="M23.19 6.42h1v2h-1z" transform="rotate(-45 23.683 7.42)"/><path d="M20.36 3.6h1v2h-1z" transform="rotate(-45 20.864 4.598)"/><path d="M4.1 19.86h1v2h-1z" transform="rotate(-45 4.599 20.855)"/><path d="M6.92 22.69h1v2h-1z" transform="rotate(-45 7.425 23.695)"/><path d="M9.75 25.52h1v2h-1z" transform="rotate(-45 10.256 26.522)"/><path d="M12.58 28.34h1v2h-1z" transform="rotate(-45 13.075 29.344)"/></svg>
+                    <img inline src="front/src/images/layout-icon.svg" alt="" />
                     Планировка
                 </h3>
                 <div class="columns">
@@ -233,7 +233,7 @@
         <div class="section with-bottom-separator">
             <div class="container">
                 <h3 class="title is-size-5 with-offset-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="021f5228-2835-4743-bfcb-ff27800245c3" data-name="Слой 1" viewBox="0 0 52.99 51.39"><path d="M42.43 29.07H17.94a3.38 3.38 0 1 1 0-6.75h24.48a10.57 10.57 0 1 0 0-21.13H4.82V.75A.76.76 0 0 0 4.07 0H.75A.76.76 0 0 0 0 .75v8.07a.76.76 0 0 0 .75.75h3.32a.76.76 0 0 0 .75-.75v-.44h37.6a3.38 3.38 0 1 1 0 6.75H17.94a10.57 10.57 0 0 0 0 21.13h24.48a3.38 3.38 0 1 1 0 6.75H4.82v-.44a.76.76 0 0 0-.75-.75H.75a.76.76 0 0 0-.75.75v8.07a.76.76 0 0 0 .75.75h3.32a.76.76 0 0 0 .75-.75v-.44h37.6a10.57 10.57 0 0 0 0-21.13zm-39.11-21H1.5V1.5h1.82zm0 41.82H1.5v-6.57h1.82zm39.11-1.19H4.82v-4.19h37.6a4.88 4.88 0 1 0 0-9.75H17.94a9.07 9.07 0 0 1 0-18.13h24.48a4.88 4.88 0 1 0 0-9.75H4.82V2.69h37.6a9.07 9.07 0 1 1 0 18.13H17.94a4.88 4.88 0 1 0 0 9.75h24.48a9.07 9.07 0 0 1 0 18.13z"/></svg>
+                    <img inline src="front/src/images/communications-icon.svg" alt="" />
                     Коммуникации
                 </h3>
                 <div class="columns">
@@ -271,7 +271,7 @@
         <div class="section layout with-bottom-separator">
             <div class="container">
                 <h3 class="title is-size-5 with-offset-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="04ecd17f-0e12-4a42-a83f-4ac5a78e3ab4" data-name="Слой 1" viewBox="0 0 33.94 33.94"><path d="M16.97 1.41l1.42 1.42.7-.71L16.97 0l-2.12 2.12.71.71 1.41-1.42zM2.83 18.39l-1.42-1.42 1.42-1.41-.71-.71L0 16.97l2.12 2.12.71-.7z"/><path d="M12.08 4.1h2v1h-2z" transform="rotate(-45 13.085 4.6)"/><path d="M9.25 6.92h2v1h-2z" transform="rotate(-45 10.246 7.426)"/><path d="M6.42 9.75h2v1h-2z" transform="rotate(-45 7.419 10.257)"/><path d="M3.6 12.58h2v1h-2z" transform="rotate(-45 4.596 13.076)"/><path d="M16.97 32.53l-1.41-1.42-.71.71 2.12 2.12 2.12-2.12-.7-.71-1.42 1.42zM31.11 15.56l1.42 1.41-1.42 1.42.71.7 2.12-2.12-2.12-2.12-.71.71z"/><path d="M19.86 28.84h2v1h-2z" transform="rotate(-45 20.854 29.342)"/><path d="M22.69 26.02h2v1h-2z" transform="rotate(-45 23.693 26.516)"/><path d="M25.52 23.19h2v1h-2z" transform="rotate(-45 26.52 23.685)"/><path d="M28.34 20.36h2v1h-2z" transform="rotate(-45 29.343 20.866)"/><path d="M28.84 12.08h1v2h-1z" transform="rotate(-45 29.34 13.087)"/><path d="M26.02 9.25h1v2h-1z" transform="rotate(-45 26.515 10.247)"/><path d="M23.19 6.42h1v2h-1z" transform="rotate(-45 23.683 7.42)"/><path d="M20.36 3.6h1v2h-1z" transform="rotate(-45 20.864 4.598)"/><path d="M4.1 19.86h1v2h-1z" transform="rotate(-45 4.599 20.855)"/><path d="M6.92 22.69h1v2h-1z" transform="rotate(-45 7.425 23.695)"/><path d="M9.75 25.52h1v2h-1z" transform="rotate(-45 10.256 26.522)"/><path d="M12.58 28.34h1v2h-1z" transform="rotate(-45 13.075 29.344)"/></svg>
+                    <img inline src="front/src/images/layout-icon.svg" alt="" />
                     Участок
                 </h3>
                 <div class="columns">
@@ -326,7 +326,7 @@
         <div class="section with-bottom-separator cost">
             <div class="container">
                 <h3 class="title is-size-5 with-offset-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="85dae04c-6c90-409c-9b5f-e2fc884c00c5" data-name="Слой 1" viewBox="0 0 58.64 57.83"><path d="M42.84 57.83A15.83 15.83 0 0 1 27 42a16.58 16.58 0 0 1 1.1-5.8l1.9.7a14.26 14.26 0 0 0-.9 5 13.8 13.8 0 1 0 13.8-13.8c-.3 0-1.9.4-3.2.7l-.6-1.9a23 23 0 0 1 3.7-.8 15.85 15.85 0 0 1 0 31.7z"/><path d="M42.14 43.23a13 13 0 0 1-3.8-.5l-.2-.1L19 32.13l-15.5-3.6a4.46 4.46 0 0 1-2.9-2.1 5 5 0 0 1-.5-3.6l3.4-14.1a4.52 4.52 0 0 1 3.7-3.2L29.94.13a11.94 11.94 0 0 1 9.3 2.6l12.2 8.6c2.1 1.7 3.5 2.9 3 6.1l-2.3 11.7-2-.4L52.34 17c.3-2.1-.3-2.6-2.3-4.3l-.2-.2-11.9-8.4a9.91 9.91 0 0 0-7.7-2.2L7.54 7.33a2.36 2.36 0 0 0-2.1 1.8L2 23.23a2.75 2.75 0 0 0 .2 2 2.48 2.48 0 0 0 1.6 1.2l15.9 3.7 19.1 10.5c1.6.4 5.8.9 7.2-1.1a4.63 4.63 0 0 0 .1-5.7l-17.3-13.5.2-.7a5.35 5.35 0 0 1 3.7-3.6c.1-.1.6-.5.9-.8.9-.9 1.6-1.5 2.4-1.3a1 1 0 0 1 .8.7c1.1 2.6 4.2 3.4 6 3.9 1.1.3 1.9.5 2 1.4V20l-1 8.1-2-.2.9-7.3a4.33 4.33 0 0 0-.5-.1c-1.9-.5-5.2-1.4-7-4.2-.2.2-.4.3-.5.5a5.45 5.45 0 0 1-1.7 1.3 3.71 3.71 0 0 0-2.1 1.7l16.6 13a6.52 6.52 0 0 1 .1 8.3c-1.06 1.73-3.46 2.13-5.46 2.13z"/></svg>
+                    <img inline src="front/src/images/cost-icon.svg" alt="" />
                     Стоимость содержания
                 </h3>
                 <div class="columns">
@@ -365,7 +365,7 @@
         <div class="section transport with-bottom-separator">
             <div class="container">
                 <h3 class="title is-size-5 with-offset-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="fc04d38a-2ff6-4409-b7cc-a7ce170fb0ab" data-name="Слой 1" viewBox="0 0 88.75 40.86"><path stroke="#fff" stroke-miterlimit="10" stroke-width=".75" d="M12.99 28.38a2 2 0 1 0 2.05 2 2 2 0 0 0-2.05-2M73.5 28.38a2 2 0 1 0 2 2 2 2 0 0 0-2-2"/><path stroke="#fff" stroke-miterlimit="10" stroke-width=".75" d="M85.17 29.71l-1.6.64a10.07 10.07 0 0 0-20.14.03c0 .39-.6.74-.6.74H23.07a4.57 4.57 0 0 0 0-.74 10.07 10.07 0 0 0-19.49-3.52 17.57 17.57 0 0 1-.13-4.36c0-.73.26-1.18.53-1.21l1.53.09v-1.54c-.19-9.52 5.18-14.46 7.37-14.66v6.88s49.73-.07 51.42 0 4.46 2.45 4.64 2.5c9.33 1.8 12.61 3.94 13.06 4.25a16.64 16.64 0 0 1 2.78 4.81l.66 1.66v1.74a12 12 0 0 1-.27 2.69zm-18.79.67a7.14 7.14 0 1 1 7.13 7.13 7.14 7.14 0 0 1-7.13-7.13zm-53.39 7.17a7.14 7.14 0 1 1 7.14-7.17 7.14 7.14 0 0 1-7.14 7.17zm2.9-34.1s19.49-.17 20.49-.07v5.74H15.89zm44 5.67H39.38V3.25a16.69 16.69 0 0 0 2.85 0c7.43-.01 15.02 4.39 17.66 5.87zm24.19 7.62l-.14-.14c-.34-.28-3.6-2.83-14.36-4.91a8.6 8.6 0 0 1-1.78-.72L54.68 3.62c-.18-.1-4.43-2.59-11.92-2.85-.45 0-6.76-.5-14.79-.37-2.46 0-4.78.12-6.93.27a94.92 94.92 0 0 0-12.28 1.5l-2.38.46 1.5 1.91c-1.9 1.77-5.22 6-5.36 14.18a4 4 0 0 0-2 3.52c0 .27-1 7.08 2.53 9.81a10.09 10.09 0 0 0 9.93 8.44 12 12 0 0 0 10.18-6.4H64.3c1.57 3.52 5.1 6.4 9.2 6.4a10.09 10.09 0 0 0 9.5-6.75l4.57-1.83.22-.65a14 14 0 0 0 .59-4.27v-2.27l-.85-2.13a19 19 0 0 0-3.45-5.85z"/></svg>
+                    <img inline src="front/src/images/car-icon.svg" alt="" />
                     Транспортная доступность
                 </h3>
                 <dl class="with-type-width-40 with-bold-definition is-vertical-on-480">
@@ -423,14 +423,14 @@
         <!-- </div> -->
         <!-- <div class="section transport"> -->
         <!--     <div class="container container_vertical"> -->
-        <!--         <div class="offset-header"><img src="images/car-icon.svg" width="42" height="19" alt="">Транспортная доступность</div> -->
+        <!--         <div class="offset-header"><img src="<%= require('images/car-icon.svg') %>" width="42" height="19" alt="">Транспортная доступность</div> -->
         <!--         <div class="info-pair"> -->
         <!--         </div> -->
         <!--     </div> -->
         <!-- </div> -->
         <!-- <div class="section infrastructure"> -->
         <!--     <div class="container container_vertical"> -->
-        <!--         <div class="offset-header"><img src="images/pins-icon.png" width="32" height="33" alt="">Инфраструктура</div> -->
+        <!--         <div class="offset-header"><img src="<%= require('images/pins-icon.png') %>" width="32" height="33" alt="">Инфраструктура</div> -->
         <!--         <div class="cols cols_2"> -->
         <!--             <div class="col"></div> -->
         <!--             <div class="col"> -->
@@ -512,5 +512,5 @@
         <!--     </div> -->
         <!-- </div> -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="index.js"></script></body>
+    </body>
 </html>

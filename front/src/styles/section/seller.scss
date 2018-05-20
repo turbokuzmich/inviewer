@@ -1,0 +1,117 @@
+$top-seller-breakpoint: 870px;
+$top-seller-breakpoint-2: 380px;
+
+.top-seller {
+    @include tablet {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    &__picture {
+        position: relative;
+        top: 12px;
+
+        @include with-size(map-get($bordered-image-sizes, normal));
+
+        @include mobile {
+            top: 0;
+
+            @include with-size(map-get($bordered-image-sizes, large));
+        }
+    }
+    &__about {
+        opacity: 0.8;
+
+        dt, dd {
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+        dt {
+            text-align: right;
+            padding-right: $size-8;
+        }
+        dd {
+            padding-left: $size-8;
+        }
+
+        @include with-type-width(95px);
+
+        @include mobile {
+            @include with-type-percentage-width(50);
+        }
+        @include tablet {
+            margin-top: $size-5;
+            margin-bottom: $size-5;
+        }
+    }
+    &__info-picture {
+        flex-shrink: 1;
+
+        @include tablet {
+            padding-right: $size-3;
+        }
+    }
+    &__actions {
+        flex-grow: 1;
+
+        @media screen and (max-width: $top-seller-breakpoint) {
+            flex-direction: column;
+        }
+
+        @include mobile {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        @media screen and (max-width: $top-seller-breakpoint-2) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    &__action {
+        white-space: nowrap;
+        position: relative;
+        height: 40px;
+        line-height: 38px;
+        padding-left: 33px;
+        font-size: 15px;
+
+        svg {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            fill: $link;
+            width: 24px;
+        }
+
+        &:hover {
+            svg {
+                fill: $link-hover;
+            }
+        }
+
+        @media screen and (min-width: $top-seller-breakpoint + 1) {
+            &+& {
+                margin-left: $size-3;
+            }
+        }
+        @media screen and (max-width: $top-seller-breakpoint) {
+            height: 33px;
+            line-height: 31px;
+            width: 100%;
+        }
+        @include mobile {
+            width: auto;
+
+            &+& {
+                margin-left: $size-3;
+            }
+        }
+        @media screen and (max-width: $top-seller-breakpoint-2) {
+            &+& {
+                margin-left: 0;
+            }
+        }
+    }
+}

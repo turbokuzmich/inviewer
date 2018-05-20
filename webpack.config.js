@@ -1,10 +1,11 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: './front/src',
+    entry: pathTo('js'),
     output: {
         path: path.resolve('./dist'),
         filename: 'index.js'
@@ -16,7 +17,7 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(png)$/,
+                test: /\.(png|svg)$/,
                 use: [
                     {
                         loader: 'url-loader',
@@ -32,11 +33,25 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './front/src/index.html'
+            template: path.resolve(pathTo('html'), 'index.html')
+        }),
+        new HtmlWebpackInlineSVGPlugin({
+            runPreEmit: true
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[id].css'
         })
-    ]
+    ],
+    resolve: {
+        alias: {
+            styles: pathTo('styles'),
+            images: pathTo('images'),
+            js: pathTo('js')
+        }
+    }
 };
+
+function pathTo(front_folder) {
+    return path.resolve(__dirname, 'front/src', front_folder);
+}

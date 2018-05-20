@@ -1,0 +1,87 @@
+.general-information {
+    .level {
+        align-items: flex-start;
+
+        @include mobile {
+            flex-direction: column-reverse;
+        }
+    }
+    &__left {
+        flex-shrink: 1;
+
+        >.level-item {
+            flex-direction: column;
+            align-items: stretch;
+            flex-shrink: 1;
+
+            @include tablet {
+                padding-right: $size-4;
+            }
+        }
+    }
+    &__right {
+    }
+
+    &__outline {
+        padding-bottom: $size-4;
+        margin-bottom: $size-4;
+
+        @include with-bottom-separator;
+    }
+    &__data {
+        @include with-type-percentage-width(30);
+
+        @media screen and (max-width: 950px) and (min-width: $tablet) {
+            @include is-vertical;
+        }
+        @media screen and (max-width: 580px) {
+            @include is-vertical;
+        }
+    }
+    &__area {
+        font-size: 22px;
+    }
+    &__price {
+        color: $primary;
+        font-size: 36px;
+    }
+    &__address {
+
+    }
+
+    &__map {
+        &-stub {
+            background-color: red;
+            margin-bottom: $size-7;
+
+            @include with-size(330px);
+
+            @include mobile {
+                @include with-size(100%, 330px);
+            }
+            @include desktop {
+                @include with-size(400px, 330px);
+            }
+            @include widescreen {
+                @include with-size(600px, 400px);
+            }
+        }
+        &-caption {
+            svg {
+                width: 9px;
+                fill: $link;
+                transform: translateY(3px);
+                display: inline-block;
+                margin-left: $size-7;
+            }
+        }
+        &-bullet {
+            display: inline-block;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background-color: red;
+            vertical-align: middle;
+        }
+    }
+}

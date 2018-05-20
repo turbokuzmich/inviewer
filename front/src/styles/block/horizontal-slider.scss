@@ -1,0 +1,31 @@
+.horizontal-slider {
+    display: flex;
+    height: 480px;
+    flex-direction: column;
+
+    &__picture {
+        background-size: cover;
+        background-position: 50%;
+        flex-grow: 1;
+    }
+    &__pictures {
+        display: flex;
+        flex-grow: 1;
+        margin-bottom: $size-7;
+    }
+    &__thumbnail {
+        &-link {
+            flex-grow: 1;
+            display: flex;
+        }
+        &-container {
+            flex-grow: 1;
+            background-size: cover;
+            background-position: 50%;
+        }
+    }
+    &__thumbnails {
+        height: 84px;
+        display: flex;
+    }
+}

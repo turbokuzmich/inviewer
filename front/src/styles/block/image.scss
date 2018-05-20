@@ -1,0 +1,22 @@
+$bordered-image-sizes: (
+    normal: 109px,
+    large: 200px
+);
+
+.bordered-image {
+    border-radius: 50%;
+    overflow: hidden;
+    border: solid 2px white;
+    box-shadow: 0 5px 21px rgba(0, 0, 0, 0.2);
+
+    &__picture {
+        background-size: cover;
+        height: 100%;
+    }
+
+    @each $type, $size in $bordered-image-sizes {
+        &.is-#{$type}-size {
+            @include with-size($size);
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.vertical-slider {
+    display: flex;
+    height: 600px;
+
+    &__picture {
+        height: 100%;
+        background-size: cover;
+        background-position: 50%;
+    }
+    &__pictures {
+        flex-grow: 1;
+        margin-right: $size-6;
+
+        @media screen and (max-width: $desktop) {
+            margin-right: 0;
+        }
+    }
+    &__thumbnail {
+        &-link {
+            background-color: #000fff;
+            display: flex;
+            flex-grow: 1;
+            margin-bottom: $size-7;
+        }
+        &-container {
+            flex-grow: 1;
+            background-size: cover;
+            background-position: 50%;
+        }
+    }
+    &__thumbnails {
+        flex-shrink: 0;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: -$size-7;
+
+        @media screen and (max-width: $desktop) {
+            display: none;
+        }
+    }
+}

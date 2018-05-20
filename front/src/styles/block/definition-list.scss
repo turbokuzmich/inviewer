@@ -1,0 +1,88 @@
+$definition-list-proportions: (20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75);
+
+@mixin with-type-percentage-width($width) {
+    dt {
+        width: percentage($width / 100);
+    }
+    dd {
+        width: percentage((100 - $width) / 100);
+    }
+}
+
+@mixin with-type-width($width) {
+    dt {
+        width: $width;
+    }
+    dd {
+        width: calc(100% - #{$width});
+    }
+}
+
+@mixin is-vertical {
+    flex-direction: column;
+
+    dt, dd {
+        width: 100%;
+        padding: 0;
+    }
+    dd:not(:last-child) {
+        margin-bottom: $size-8;
+    }
+}
+
+dl {
+	display: flex;
+	flex-flow: row wrap;
+
+    dt, dd {
+        padding-top: $size-8;
+        padding-bottom: $size-8;
+    }
+
+    dt {
+        padding-right: $size-8;
+    }
+    dd {
+        padding-left: $size-8;
+
+        .content & {
+            margin-left: 0;
+        }
+    }
+
+    @each $proportion in $definition-list-proportions {
+        &.with-type-width-#{$proportion} {
+            @include with-type-percentage-width($proportion);
+        }
+    }
+
+    &.with-bold-definition {
+        dd {
+            font-weight: bold;
+        }
+    }
+
+    &.has-right-definition {
+        dd {
+            text-align: right;
+        }
+    }
+    &.is-vertical-on-mobile {
+        @include mobile {
+            @include is-vertical;
+        }
+    }
+    &.is-vertical-on-480 {
+        @media screen and (max-width: 480px) {
+            @include is-vertical;
+
+            dd {
+                text-align: left;
+            }
+        }
+    }
+
+    .content &:not(:last-child) {
+        margin-bottom: 1em;
+    }
+}

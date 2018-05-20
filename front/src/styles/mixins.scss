@@ -1,0 +1,8 @@
+@mixin with-bottom-separator {
+    border-bottom: 1px solid $grey-lighter;
+}
+
+@mixin with-size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}

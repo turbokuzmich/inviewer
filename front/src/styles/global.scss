@@ -1,0 +1,32 @@
+html, body {
+    font-size: 17px;
+    color: $text;
+}
+
+.button {
+    border-radius: 18px;
+}
+
+a {
+    img {
+        transition: opacity .2s;
+    }
+
+    &:hover {
+        img {
+            opacity: 0.8;
+        }
+    }
+}
+
+.section {
+    @include mobile {
+        padding: $size-4 $size-1;
+    }
+}
+
+.level-left + .level-right {
+    @include mobile {
+        margin-top: $size-4;
+    }
+}
