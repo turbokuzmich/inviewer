@@ -6575,15 +6575,19 @@ dl {
 .pie-chart {
   display: flex; }
   .pie-chart__graph {
-    background-color: red;
     flex-grow: 1;
-    flex-shrink: 1;
+    flex-shrink: 0;
     padding-right: 0.75rem; }
   .pie-chart__info {
     padding-left: 0.75rem;
-    flex-shrink: 0;
-    flex-grow: 0;
-    width: 215px; }
+    flex-shrink: 1;
+    flex-grow: 1;
+    padding-left: 0.75rem;
+    flex-shrink: 1;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
 
 .vertical-slider {
   display: flex;
@@ -6862,7 +6866,32 @@ dl {
       .section.construction dl dd:not(:last-child) {
         margin-bottom: 0.5rem; } }
 
-@media screen and (max-width: 1088px) {
+.cost .pie-chart {
+  margin-top: -2rem; }
+  .cost .pie-chart .important-note {
+    margin-bottom: 1.5rem; }
+  .cost .pie-chart__info {
+    min-width: 200px; }
+
+@media screen and (max-width: 768px) {
+  .cost .pie-chart {
+    margin-top: 0; }
+    .cost .pie-chart__canvas {
+      height: 300px; } }
+
+@media screen and (min-width: 769px), print {
+  .cost .pie-chart {
+    margin-left: 1rem; }
+    .cost .pie-chart__graph {
+      width: 300px;
+      height: 300px; }
+    .cost .pie-chart__canvas {
+      width: 300px;
+      height: 300px; }
+    .cost .pie-chart .important-note {
+      font-size: 0.8rem; } }
+
+@media screen and (max-width: 980px) {
   .cost .pie-chart {
     flex-direction: column; }
     .cost .pie-chart__graph {
@@ -6873,14 +6902,31 @@ dl {
       padding-left: 0;
       width: auto; }
       .cost .pie-chart__info-summary {
-        flex-grow: 1; }
+        flex-grow: 1;
+        margin-bottom: 1.5rem; }
       .cost .pie-chart__info .important-note {
         width: 200px; } }
 
 @media screen and (min-width: 1088px) {
   .cost .pie-chart {
-    flex-direction: row; }
+    margin-left: 3rem; }
+    .cost .pie-chart__graph {
+      width: 350px;
+      height: 350px; }
+    .cost .pie-chart__canvas {
+      width: 350px;
+      height: 350px; }
+    .cost .pie-chart .important-note {
+      font-size: 1rem; }
   .cost__chart {
     width: 66.6%;
     flex: none; } }
+
+@media screen and (min-width: 1280px) {
+  .cost .pie-chart__graph {
+    width: 450px;
+    height: 450px; }
+  .cost .pie-chart__canvas {
+    width: 450px;
+    height: 450px; } }
 

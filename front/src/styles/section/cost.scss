@@ -1,8 +1,44 @@
 .cost {
-    @include mobile {
+    .pie-chart {
+        margin-top: -2rem;
 
+        .important-note {
+            margin-bottom: $size-4;
+        }
+
+        &__info {
+            min-width: 200px;
+        }
     }
-    @media screen and (max-width: $desktop) {
+
+    @include mobile {
+        .pie-chart {
+            margin-top: 0;
+
+            &__canvas {
+                height: 300px;
+            }
+        }
+    }
+    @include tablet {
+        .pie-chart {
+            margin-left: $size-6;
+
+            &__graph {
+                width: 300px;
+                height: 300px;
+            }
+            &__canvas {
+                width: 300px;
+                height: 300px;
+            }
+
+            .important-note {
+                font-size: 0.8rem;
+            }
+        }
+    }
+    @media screen and (max-width: 980px) {
         .pie-chart {
             flex-direction: column;
 
@@ -17,16 +53,33 @@
 
                 &-summary {
                     flex-grow: 1;
+                    margin-bottom: $size-4;
                 }
                 .important-note {
                     width: 200px;
                 }
             }
+            &__canvas {
+
+            }
         }
     }
     @include desktop {
         .pie-chart {
-            flex-direction: row;
+            margin-left: $size-1;
+
+            &__graph {
+                width: 350px;
+                height: 350px;
+            }
+            &__canvas {
+                width: 350px;
+                height: 350px;
+            }
+
+            .important-note {
+                font-size: 1rem;
+            }
         }
         &__chart {
             width: 66.6%;
@@ -34,6 +87,15 @@
         }
     }
     @include widescreen {
-
+        .pie-chart {
+            &__graph {
+                width: 450px;
+                height: 450px;
+            }
+            &__canvas {
+                width: 450px;
+                height: 450px;
+            }
+        }
     }
 }
