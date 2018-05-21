@@ -1,6 +1,15 @@
 .footer {
     color: $white;
 
+    .logo {
+        width: 136px;
+        height: 47px;
+        display: block;
+
+        svg {
+            fill: $white;
+        }
+    }
 
     &__content {
         display: flex;

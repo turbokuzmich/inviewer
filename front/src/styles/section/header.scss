@@ -3,6 +3,15 @@
 
     @include with-bottom-separator;
 
+    .logo {
+        width: 136px;
+        height: 47px;
+
+        svg {
+            fill: $link;
+        }
+    }
+
     &.section {
         padding-top: $size-6;
         padding-bottom: $size-6;

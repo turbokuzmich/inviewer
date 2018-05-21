@@ -6699,6 +6699,11 @@ dl {
 .main-header {
   line-height: 0;
   border-bottom: 1px solid #dbdbdb; }
+  .main-header .logo {
+    width: 136px;
+    height: 47px; }
+    .main-header .logo svg {
+      fill: #676e73; }
   .main-header.section {
     padding-top: 1rem;
     padding-bottom: 1rem; }
@@ -7029,6 +7034,12 @@ dl {
 
 .footer {
   color: white; }
+  .footer .logo {
+    width: 136px;
+    height: 47px;
+    display: block; }
+    .footer .logo svg {
+      fill: white; }
   .footer__content {
     display: flex; }
   .footer__logo {
