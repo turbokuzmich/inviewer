@@ -8,4 +8,10 @@
         top: 50%;
         transform: translateY(-50%);
     }
+
+    @media screen and (max-width: $desktop) {
+        svg {
+            display: none;
+        }
+    }
 }

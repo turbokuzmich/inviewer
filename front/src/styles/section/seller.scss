@@ -15,8 +15,6 @@ $top-seller-breakpoint-2: 380px;
 
         @include mobile {
             top: 0;
-
-            @include with-size(map-get($bordered-image-sizes, large));
         }
     }
     &__about {

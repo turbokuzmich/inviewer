@@ -1,0 +1,17 @@
+.footer {
+    color: $white;
+
+
+    &__content {
+        display: flex;
+    }
+    &__logo {
+        width: 30%;
+        min-width: 190px;
+    }
+    &__menu {
+        li + li {
+            margin-top: $size-6;
+        }
+    }
+}
