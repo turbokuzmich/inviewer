@@ -1,0 +1,32 @@
+.infrastructure {
+    &__map {
+        &-stub {
+            background-color: red;
+            margin-bottom: $size-7;
+
+            @include with-size(330px);
+
+            @include mobile {
+                @include with-size(100%, 330px);
+            }
+            @media screen and (min-width: 769px) and (max-width: 940px) {
+                @include with-size(350px, 350px);
+            }
+            @media screen and (min-width: 941px) and (max-width: $desktop) {
+                @include with-size(450px, 350px);
+            }
+            @include desktop {
+                @include with-size(500px, 330px);
+            }
+            @include widescreen {
+                @include with-size(600px, 400px);
+            }
+        }
+    }
+
+    .accordion {
+        @include mobile {
+            max-width: 440px;
+        }
+    }
+}

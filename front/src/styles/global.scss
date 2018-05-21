@@ -56,3 +56,13 @@ a {
         margin-top: $size-4;
     }
 }
+
+.footer {
+    padding-right: 3rem;
+    padding-left: 3rem;
+
+    @include mobile {
+        padding-right: $size-4;
+        padding-left: $size-4;
+    }
+}

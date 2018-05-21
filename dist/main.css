@@ -6455,6 +6455,14 @@ a:hover img {
   .level-left + .level-right {
     margin-top: 1.5rem; } }
 
+.footer {
+  padding-right: 3rem;
+  padding-left: 3rem; }
+  @media screen and (max-width: 768px) {
+    .footer {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem; } }
+
 .is-vertical-paddingless {
   padding-top: 0;
   padding-bottom: 0; }
@@ -6661,6 +6669,32 @@ dl {
   .horizontal-slider__thumbnails {
     height: 84px;
     display: flex; }
+
+.accordion.type-1 {
+  display: flex;
+  flex-direction: column; }
+  .accordion.type-1 .accordion__header {
+    display: flex;
+    color: #273138;
+    flex-wrap: nowrap; }
+    .accordion.type-1 .accordion__header-title {
+      flex-grow: 1;
+      flex-shrink: 1; }
+    .accordion.type-1 .accordion__header-count {
+      margin-left: 0.75rem;
+      flex-shrink: 0;
+      font-weight: bold; }
+    .accordion.type-1 .accordion__header-details {
+      color: #3ba5d6;
+      margin-left: 0.75rem;
+      flex-shrink: 0; }
+    .accordion.type-1 .accordion__header:hover .accordion__header-details {
+      color: #cb1a1a; }
+  .accordion.type-1 .accordion__content {
+    display: none;
+    padding-bottom: 1.5rem; }
+    .accordion.type-1 .accordion__content.is-open {
+      display: block; }
 
 .main-header {
   line-height: 0;
@@ -6945,6 +6979,36 @@ dl {
   .cost .pie-chart__canvas {
     width: 450px;
     height: 450px; } }
+
+.infrastructure__map-stub {
+  background-color: red;
+  margin-bottom: 0.75rem;
+  width: 330px;
+  height: 330px; }
+  @media screen and (max-width: 768px) {
+    .infrastructure__map-stub {
+      width: 100%;
+      height: 330px; } }
+  @media screen and (min-width: 769px) and (max-width: 940px) {
+    .infrastructure__map-stub {
+      width: 350px;
+      height: 350px; } }
+  @media screen and (min-width: 941px) and (max-width: 1088px) {
+    .infrastructure__map-stub {
+      width: 450px;
+      height: 350px; } }
+  @media screen and (min-width: 1088px) {
+    .infrastructure__map-stub {
+      width: 500px;
+      height: 330px; } }
+  @media screen and (min-width: 1280px) {
+    .infrastructure__map-stub {
+      width: 600px;
+      height: 400px; } }
+
+@media screen and (max-width: 768px) {
+  .infrastructure .accordion {
+    max-width: 440px; } }
 
 .consultant .container {
   display: flex;

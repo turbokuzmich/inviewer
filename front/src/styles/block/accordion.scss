@@ -1,0 +1,44 @@
+.accordion {
+
+
+    &.type-1 {
+        display: flex;
+        flex-direction: column;
+
+        .accordion__header {
+            display: flex;
+            color: $text;
+            flex-wrap: nowrap;
+
+            &-title {
+                flex-grow: 1;
+                flex-shrink: 1;
+            }
+            &-count {
+                margin-left: $size-7;
+                flex-shrink: 0;
+                font-weight: bold;
+            }
+            &-details {
+                color: $link-secondary;
+                margin-left: $size-7;
+                flex-shrink: 0;
+            }
+
+            &:hover {
+                .accordion__header-details {
+                    color: $primary;
+                }
+            }
+        }
+
+        .accordion__content {
+            display: none;
+            padding-bottom: $size-4;
+
+            &.is-open {
+                display: block;
+            }
+        }
+    }
+}
