@@ -1,5 +1,16 @@
 @import './overrides.scss';
-@import 'bulma';
+
+@import 'bulma/sass/utilities/_all.sass';
+@import 'bulma/sass/base/_all.sass';
+@import 'bulma/sass/elements/button.sass';
+@import 'bulma/sass/elements/container.sass';
+@import 'bulma/sass/elements/content.sass';
+@import 'bulma/sass/elements/title.sass';
+@import 'bulma/sass/components/level.sass';
+@import 'bulma/sass/grid/_all.sass';
+@import 'bulma/sass/layout/section.sass';
+@import 'bulma/sass/layout/footer.sass';
+
 @import './variables.scss';
 @import './global.scss';
 @import './mixins.scss';
